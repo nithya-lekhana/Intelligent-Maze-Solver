@@ -110,11 +110,18 @@ python main.py
 
 *(Note: Completeness and Optimality assume uniform cost per step on a finite grid)*
 
+The application records path length, nodes explored, and execution time for each algorithm, allowing their behavior to be compared on the generated maze.
+
 ## Screenshots
-*(Add your screenshots here before pushing to GitHub!)*
-- `screenshots/main-interface.png`
-- `screenshots/astar.png`
-- `screenshots/bfs.png`
+
+### Main Interface
+![Main Interface](screenshots/main-interface.png)
+
+### BFS Execution
+![BFS Result](screenshots/bfs-result.png)
+
+### Algorithm Comparison
+![Algorithm Comparison](screenshots/algorithm-comparison.png)
 
 ## Academic Project
 This project was developed as part of a Problem-Based Learning (PBL) project at **Woxsen University**.
