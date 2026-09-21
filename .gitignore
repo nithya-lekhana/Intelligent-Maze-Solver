@@ -23,3 +23,10 @@ Thumbs.db
 *.egg-info/
 dist/
 build/
+
+# Local Python virtual environment
+web-env/
+# Local Pygbag build files
+pygbag-build/
+# Desktop backup
+main_desktop_backup.py

@@ -1,3 +1,4 @@
+import asyncio
 import pygame
 import random
 import heapq
@@ -1335,57 +1336,62 @@ initialize_maze()
 
 running = True
 
-while running:
+async def main():
 
-    # --------------------------------------------------------
-    # EVENTS
-    # --------------------------------------------------------
+    global running
 
-    for event in pygame.event.get():
+    while running:
 
-        if event.type == pygame.QUIT:
+        # --------------------------------------------------------
+        # EVENTS
+        # --------------------------------------------------------
 
-            running = False
+        for event in pygame.event.get():
 
-        elif (
-            event.type
-            ==
-            pygame.MOUSEBUTTONDOWN
-        ):
+            if event.type == pygame.QUIT:
 
-            if event.button == 1:
+                running = False
 
-                handle_click(
-                    event.pos
-                )
+            elif (
+                event.type
+                ==
+                pygame.MOUSEBUTTONDOWN
+            ):
 
-    # --------------------------------------------------------
-    # UPDATE ANIMATION
-    # --------------------------------------------------------
+                if event.button == 1:
 
-    if animation_active:
+                    handle_click(
+                        event.pos
+                    )
 
-        update_animation()
+        # --------------------------------------------------------
+        # UPDATE ANIMATION
+        # --------------------------------------------------------
 
-    # --------------------------------------------------------
-    # DRAW EVERYTHING
-    # --------------------------------------------------------
+        if animation_active:
 
-    screen.fill(
-        WHITE
-    )
+            update_animation()
 
-    draw_maze()
+        # --------------------------------------------------------
+        # DRAW EVERYTHING
+        # --------------------------------------------------------
 
-    draw_panel()
+        screen.fill(
+            WHITE
+        )
 
-    pygame.display.flip()
+        draw_maze()
 
-    clock.tick(60)
+        draw_panel()
+
+        pygame.display.flip()
+
+        # Give control back to the browser.
+        await asyncio.sleep(0)
 
 
 # ============================================================
-# EXIT
+# PROGRAM ENTRY POINT
 # ============================================================
 
-pygame.quit()
+asyncio.run(main())
