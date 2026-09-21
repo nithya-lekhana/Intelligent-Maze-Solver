@@ -3,6 +3,9 @@
 ## Overview
 Intelligent Maze Solver is an interactive Pygame application that visually demonstrates and compares different pathfinding and search algorithms on dynamically generated grid-based mazes. 
 
+## 🎮 Live Demo
+[▶ Run Intelligent Maze Solver](https://nithya-lekhana.github.io/Intelligent-Maze-Solver/)
+
 ## Objectives
 The primary objective of this project is to provide a visual playground to understand the behavior of different search algorithms in solving a maze. By observing how each algorithm explores nodes and finds paths, users can intuitively grasp concepts like completeness, optimality, and time complexity.
 
