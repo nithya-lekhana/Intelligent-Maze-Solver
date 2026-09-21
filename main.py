@@ -397,9 +397,6 @@ def find_positions(grid):
     )
 
 
-    return neighbors
-
-
 
 # ============================================================
 # ALGORITHMS REMOVED

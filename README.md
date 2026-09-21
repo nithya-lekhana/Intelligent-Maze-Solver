@@ -26,7 +26,11 @@ Combines the space-efficiency of DFS with the completeness of BFS by repeatedly 
 A heuristic-based algorithm that prioritizes nodes closest to the goal. It is fast but does not guarantee the optimal path.
 
 ### 5. A* Search
-An optimal heuristic search algorithm that balances the cost to reach a node (`g`) and the estimated cost to the goal (`h`). Guarantees the shortest path while exploring fewer nodes than BFS.
+A heuristic search algorithm that combines the cost to reach a node (`g`)
+with the estimated cost to the goal (`h`). Under the appropriate
+conditions, such as non-negative edge costs and an admissible heuristic,
+A* can find an optimal path while potentially reducing the number of
+nodes explored compared with uninformed search.
 
 ## Heuristic Function
 For **Greedy Best-First Search** and **A* Search**, this project utilizes the **Manhattan Distance** heuristic.
